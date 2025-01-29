@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #000000;
+}
+
+html, body {
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    color: rgb(105, 141, 196); /* Asegurarse de que el texto sea blanco */
+}
+/* Estilos para las tarjetas en la sección de nosotros */
+.card {
+    background-color: #151525; /* Cambia el fondo de las tarjetas */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo para el hover (cuando el ratón pasa sobre la tarjeta) */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el texto dentro de la tarjeta */
+.card-body {
+    color: #eed0d0; /* Color del texto dentro de la tarjeta */
+}
+
+/* Opcional: cambiar el color del título */
+.card-title {
+    color: #4386ce; /* Cambiar color del título a azul (puedes poner el color que prefieras) */
+}
+
+/* Opcional: cambiar el color del texto dentro de la tarjeta */
+.card-text {
+    color: #8f8585; /* Color del texto */
+}

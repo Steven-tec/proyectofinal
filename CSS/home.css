@@ -1,0 +1,94 @@
+/* Estilo general de la página */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente limpia y moderna */
+    color: white;
+    background-color: #2C3E50; /* Fondo oscuro con tono azul-gris */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 600px;
+    margin-top: 100px;
+    background: linear-gradient(145deg, #34495E, #2C3E50); /* Degradado sutil para el fondo */
+    padding: 40px;
+    border-radius: 12px; /* Bordes más suaves */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Efecto de transición para sombra y transformación */
+}
+
+.container:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Sombra más profunda en hover */
+    transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Estilo para el mensaje de bienvenida */
+.welcome-message {
+    text-align: center;
+    color: #ECF0F1; /* Color claro para el texto */
+    font-size: 32px;
+    font-weight: 600; /* Texto en negrita */
+    margin-bottom: 30px;
+    letter-spacing: 1px; /* Un poco de espacio entre letras */
+}
+
+/* Estilo para el texto que muestra el correo del usuario */
+#welcome-email {
+    font-size: 24px;
+    color: #1ABC9C; /* Color de texto verde suave para destacar el email */
+    font-weight: 500; /* Un peso de fuente ligeramente menor */
+    text-transform: uppercase; /* Convertir a mayúsculas para darle énfasis */
+}
+
+/* Estilo del botón de cierre de sesión */
+.btn-danger {
+    display: inline-block;
+    padding: 14px 28px;
+    color: white;
+    background-color: #E74C3C; /* Rojo vibrante */
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para el botón */
+}
+
+.btn-danger:hover {
+    background-color: #C0392B; /* Rojo más oscuro en hover */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.btn-danger:active {
+    background-color: #922B21; /* Rojo aún más oscuro cuando se hace clic */
+    transform: translateY(0); /* Volver a su posición original */
+}
+
+/* Responsividad: ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px; /* Menos relleno en pantallas pequeñas */
+    }
+
+    .welcome-message {
+        font-size: 28px; /* Ajustar tamaño de fuente en pantallas pequeñas */
+    }
+
+    .btn-danger {
+        width: 100%; /* El botón se hace de ancho completo en pantallas pequeñas */
+        padding: 16px;
+    }
+}
+
+/* Fondo personalizado con la imagen */
+html, body {
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    color: white; /* Asegurarse de que el texto sea blanco */
+}

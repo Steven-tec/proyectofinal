@@ -87,3 +87,10 @@ color: white;
 .links a{
 margin-left: 4px;
 }
+
+/* Estilos adicionales para el texto "Recuérdame" */
+.remember-me-label {
+    font-weight: bold; /* Negrita */
+    color: rgb(207, 186, 186); /* Color negro */
+    font-size: 16px; /* Ajusta el tamaño de la fuente si es necesario */
+}
