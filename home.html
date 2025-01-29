@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <style>
+        /* Puedes agregar tus estilos personalizados aquí */
+        .welcome-message {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 24px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Bienvenido, <span id="user-email"></span>!</h1>
+            <p>¡Has iniciado sesión correctamente!</p>
+        </div>
+        <div class="text-center">
+            <a href="logout.html" class="btn btn-danger">Cerrar sesión</a>
+        </div>
+    </div>
+
+    <script>
+        // Capturar el parámetro 'email' de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const userEmail = urlParams.get('email');
+
+        // Mostrar el correo del usuario en el mensaje
+        if (userEmail) {
+            document.getElementById('user-email').textContent = userEmail;
+        } else {
+            document.getElementById('user-email').textContent = 'Usuario';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+    <!-- Custom styles (opcional) -->
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Iniciar sesión</h3>
+                </div>
+                <div class="card-body">
+                    <form id="loginForm">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn float-right login_btn" onclick="iniciarSesion()">Iniciar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        ¿No tienes cuenta? <a href="register.html">Regístrate</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="recuperar_contraseña.html">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Datos simulados de usuarios registrados
+        const usuariosRegistrados = [
+            { email: "steven@gmail.com", password: "steven123" },
+            { email: "alexis@gmail,com", password: "alexis123" },
+            { email: "ronny@gmail.com", password: "ronny123" },
+            { email: "david@gmail.com", password: "david123" },
+            
+        ];
+
+        // Función para manejar la lógica de login y redirección
+        function iniciarSesion() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Buscar si el correo y la contraseña coinciden con un usuario registrado
+            const usuario = usuariosRegistrados.find(u => u.email === email && u.password === password);
+
+            if (usuario) {
+                // Si el usuario está registrado y las credenciales son correctas, redirige a home.html
+                window.location.href = `home.html?email=${encodeURIComponent(email)}`;
+            } else {
+                // Si las credenciales no coinciden, muestra un mensaje de error
+                alert('Correo o contraseña incorrectos.');
+            }
+        }
+    </script>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
